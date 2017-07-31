@@ -10,7 +10,7 @@ module.exports = function createUpdatedCollection(collectionA, objectB) {
         if(objectB.value.indexOf(item)!==-1){
             dic[item]-=Math.floor(dic[item]/3);
         }
-    }
+    };
     for(let j in dic){
         C.push({key:j,count:dic[j]});
     }

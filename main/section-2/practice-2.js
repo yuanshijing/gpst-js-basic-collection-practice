@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
+	var result=[];
 	var dic={};
-	var ans=[];
 	for(let i of collection){
 		var c,cnt;
 		var temp=i.split('-');
@@ -11,7 +11,7 @@ module.exports = function countSameElements(collection) {
 		dic[c]=typeof dic[c]==='undefined'?cnt:dic[c]+cnt;
 	}
 	for(let item in dic){
-		ans.push({key:item,count:dic[item]})
+		result.push({key:item,count:dic[item]});
 	}
-	return ans;
-}
+	return result;
+};

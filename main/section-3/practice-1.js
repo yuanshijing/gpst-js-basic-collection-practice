@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
-    for(let i in collectionA){
-        if(objectB.value.indexOf(collectionA[i].key)!=-1){
-            collectionA[i].count--;
+    for(let i of collectionA){
+        if(objectB.value.indexOf(i.key)!=-1){
+            i.count--;
         }
     };
     return collectionA;
-}
+};
