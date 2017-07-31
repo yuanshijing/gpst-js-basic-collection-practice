@@ -1,5 +1,14 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
-  return '实现练习要求，并改写该行代码。';
+	var dic={};
+	var ans=[];
+	for(let i of collection){
+		dic[i]=typeof (dic[i])=='undefined'?1:dic[i]+1;
+	}
+	for(let item in dic){
+		ans.push({key:item,count:dic[item]})
+	}
+	return ans;
 }
+
